@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block navbar %}
+    {% include 'components/navbar.html' %}
+{% endblock navbar %}
+
+{% block content %}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<body>
+  <div class="add-work"><a href="{% url 'personal:work_form' %}">ADD MORE &nbsp;<i class="fa fa-plus"></i></a></div>
+  {% for work in works %}
+  <div class="work">
+    <div class="work-container">
+      <img class="thumbnail" src="{{work.image.url}}" alt="">
+        <div class="box-element personal"><h2>{{work.title}}</h2></div>
+    </div>
+</div>
+  {% endfor %}
+</body>
+{% endblock content %}

@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block navbar %}
+    {% include 'components/navbar.html' %}
+{% endblock navbar %}
+
+{% block content %}
+<form method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+    {% for field in form %}
+        <div class="form-container">
+            {{field.errors}}
+            {{field.label_tag}} <br>
+            {{field}}
+
+            {% if field.help_text %}
+                <p class="help">{{ field.help_text|safe}}</p>
+            {% endif %}
+        </div>
+    {% endfor %}
+    <input style="margin-left: 2%;" type="submit" name="submit" value="submit" />
+</form>
+
+{% endblock content %}

@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block navbar %}
+    {% include 'components/navbar.html' %}
+{% endblock navbar %}
+
+{% block content %}
+    <body>
+        <div class="banner-text">
+            <h2>Welcome to My Website</h2><br>
+            <h1>I'm <br><span>Rajeshan Rai</span></h1><br>
+            <p>Education is the passport to the future, for<br>tomorrow belongs to those who prepare for it today.</p>
+        </div>
+
+        <div class="animation-area">
+            <ul class="box-area">
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+	    </div>
+        
+        <div class="last-container">
+            <div class="last-container-field">
+                <h1>WED DEVELOPMENT FOR MY BUSINESS</h1><br>
+                <h3>We deliver web and mobile app development services with 100% project
+                    <br> delivery success. Hire the best programmers at affordable prices. Our <br> design-focused approach and project execution processes help 
+                    <br>you to deliver the right solutions.</h3>
+            </div>
+
+          <div class="last-container-image-field">
+
+            <div class="last-container-image" id="first">
+                <span class="img1">
+                    <img src="{% static 'img/my.jpg' %}">
+                </span>
+                <span class="img1">
+                    <img src="{% static 'img/my1.jpg' %}">
+                </span>
+                    <img src="{% static 'img/my2.jpg' %}">
+
+            </div>
+        </div>
+    </body>
+{% endblock content %}

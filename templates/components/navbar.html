@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+    <body>
+        <div id = "control">
+            <nav id="nav" role="navigation">
+
+                <label class="logo"><a href="{% url 'personal:index' %}">Razz<span>Ace</span></a></label>
+                <ul>
+                    <li>
+                        <a class="active" href="{% url 'personal:index' %}">Home</a>
+                    </li>
+
+                    <li> 
+                        <a href="{% url 'personal:about' %}">About</a>
+                    </li>
+
+                    <li>
+                        <a href="{% url 'personal:skills' %}">Skills</a>
+                    </li>
+
+                    <li> 
+                        <a href="{% url 'personal:work' %}">MyWork</a>
+                    </li>
+
+                    
+                    <li> 
+                        <a href="{% url 'personal:cv' %}">CV</a>
+                    </li>
+                
+                </ul>
+            </nav>
+        </div>
+    </body>
+</html>

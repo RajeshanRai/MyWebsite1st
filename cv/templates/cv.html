@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block navbar %}
+    {% include 'components/navbar.html' %}
+{% endblock navbar %}
+
+{% block content %}
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+   <body>
+       {% for post in file %}
+       <div class="download-cv">
+            <h2>{{post.title}}</h2><br>
+            <a href="{{post.upload.url}}" download="{{post.upload.url}}">
+                To download resume click in the icon : <br><br>
+            <i class="fa fa-download"></i></a>
+       </div>
+       {% endfor %}
+
+       <div class="cv-image">
+           <img src="{% static 'img/cv.jpg' %}">
+       </div>
+
+   </body>
+{% endblock content %}

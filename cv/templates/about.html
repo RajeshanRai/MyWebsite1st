@@ -1,0 +1,56 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block navbar %}
+    {% include 'components/navbar.html' %}
+{% endblock navbar %}
+
+{% block content %}
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<body>
+    {% for abt in about %}
+    <div class="about-div">
+
+      <div class="about-image">
+          <img src="{{abt.image.url}}" alt="">
+      </div>
+      {% endfor %}
+    
+      <div class="row">
+          <div class="column" id="cl1">
+            <h2>About Me</h2><br>
+            <p>“Good morning, my name is Rajeshan Rai, and I am a undergraduate student at Tribhuvan University with a focus in Computer Science in Information Technology (BSc.Csit).
+              I grew up in a family of farmer and know that being a educated person and making my neighbours educated is my aim. My passion for helping others has been evident in my 
+              involvement in Hillside Sample Academy and as a teacher for one year. Through those experiences I have learned to interact with a diverse group of people, which has 
+              increased my ability to relate to others. I have also had the opportunity to create lessons for the students that is focused on life skills like teamwork, communication, 
+              and time management.”</p>
+          </div>
+
+
+          {% for abt in about %}
+          <div class="column">
+            <h2>My Information</h2><br>
+
+            <h5>{{abt.name}}</h5><br>
+            <h5>{{abt.address}}</h5><br>
+            <h5>{{abt.district}}</h5><br>
+            <h5>{{abt.province}}</h5><br>
+            <h5>{{abt.mobile_no}}</h5><br>
+            <h5>{{abt.email}}</h5><br>
+
+          </div>
+          {% endfor %}
+          <div class="column">
+            <h2>Reach Me In</h2><br>
+            <ul>
+                <a href="#"><i class="fa fa-facebook-square">&nbsp;&nbsp;<li>Facebook</li></i></a><br><br>
+                <a href="#"><i class="fa fa-instagram"><li>&nbsp;&nbsp;Instagram</li></i></a><br><br>
+                <a href="#"><i class="fa fa-skype"><li>&nbsp;&nbsp;Skype</li></i></a><br><br>
+                <a href="#"><i class="fa fa-whatsapp">&nbsp;&nbsp;<li>Whatsapp</li></i></a>
+            </ul>
+          </div>
+      </div>
+ </div>
+    
+</body>
+{% endblock content %}
